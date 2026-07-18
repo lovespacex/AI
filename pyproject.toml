@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minichat-200m"
+version = "0.1.0"
+description = "A 200M-parameter Chinese chat model trained from random initialization"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+include = ["minichat*"]
+

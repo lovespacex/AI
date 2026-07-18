@@ -1,0 +1,21 @@
+model_config: configs/model_25m.yaml
+mode: sft
+train_data: data/processed/sft-512
+val_data: data/processed/sft-512-validation
+output_dir: checkpoints/quick-sft-25m
+init_checkpoint: checkpoints/quick-pretrain-25m/latest.pt
+seed: 2027
+max_steps: 2500
+micro_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-4
+min_learning_rate: 1.0e-5
+warmup_steps: 100
+weight_decay: 0.05
+grad_clip: 1.0
+log_interval: 10
+eval_interval: 250
+eval_batches: 10
+save_interval: 250
+resume: auto
+

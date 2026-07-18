@@ -1,0 +1,21 @@
+model_config: configs/model_25m.yaml
+mode: sft
+train_data: data/processed/chat-sft-512
+val_data: data/processed/chat-sft-512-validation
+output_dir: checkpoints/quick-chat-25m
+init_checkpoint: checkpoints/quick-pretrain-25m/latest.pt
+seed: 2028
+max_steps: 4000
+micro_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.5e-4
+min_learning_rate: 1.5e-5
+warmup_steps: 100
+weight_decay: 0.05
+grad_clip: 1.0
+log_interval: 20
+eval_interval: 500
+eval_batches: 20
+save_interval: 500
+resume: auto
+

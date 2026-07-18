@@ -1,0 +1,11 @@
+model:
+  vocab_size: 512
+  dim: 128
+  n_layers: 2
+  n_heads: 4
+  n_kv_heads: 2
+  hidden_dim: 352
+  max_seq_len: 128
+  gradient_checkpointing: true
+  tie_embeddings: true
+
